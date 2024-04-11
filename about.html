@@ -11,9 +11,17 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-MNYYB5J9P2');
 </script>
+    // event template:
+gtag('event', '<type>', {<parameters>});
+// event template / example:
+gtag('event', '<type>', {
+  'event_category': '<category>',
+  'event_label':' <label>',
+  'value': '<value>'
+});
+    
   </head>
   <body>
     <header>
@@ -44,5 +52,22 @@
       <p>&copy; 2024 Davey Dancer |
       </p>
     </footer>
+    <script type="text/javascript">
+
+    // referencing an HTML button element by its identifier:
+    var resumeButton = document.getElementById("download-resume")
+
+    // defining a reusable function:
+    function handleClick() {
+        console.log("YOU CLICKED ME!")
+
+        // send event to GA
+        gtag("event", "resume_download")
+    }
+
+    // triggering the function when the button is clicked:
+    resumeButton.addEventListener("click", handleClick, false)
+
+</script>
   </body>
 </html>
