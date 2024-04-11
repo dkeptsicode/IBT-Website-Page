@@ -37,18 +37,20 @@
 
     <script type="text/javascript">
 
-        //
-        // FYI: this is a website interactivity teaser...
-        //
-        //var resumeButton = document.getElementById("download-resume")
-        //
-        //function handleClick(event) {
-        //    console.log("YOU CLICKED ME!")
-        //    console.log(event.target)
-        //}
-        //
-        //resumeButton.addEventListener("click", handleClick, false)
-
-    </script>
+      // referencing an HTML button element by its identifier:
+      var resumeButton = document.getElementById("download-resume")
+  
+      // defining a reusable function:
+      function handleClick() {
+          console.log("YOU CLICKED ME!")
+  
+          // send event to GA
+          gtag("event", "resume_download")
+      }
+  
+      // triggering the function when the button is clicked:
+      resumeButton.addEventListener("click", handleClick, false)
+  
+  </script>>
   </body>
 </html>
